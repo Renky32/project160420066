@@ -25,10 +25,23 @@
         android:id="@+id/hobbyNewsFragment"
         android:name="com.example.project160420055.view.HobbyNewsFragment"
         android:label="fragment_hobby_news"
-        tools:layout="@layout/fragment_hobby_news" />
+        tools:layout="@layout/fragment_hobby_news" >
+        <action
+            android:id="@+id/actionDetailFragment"
+            app:destination="@id/detailFragment" >
+            <argument
+                android:name="id"
+                app:argType="integer" />
+        </action>
+    </fragment>
     <fragment
         android:id="@+id/regisFragment"
         android:name="com.example.project160420055.view.RegisFragment"
         android:label="fragment_regis"
         tools:layout="@layout/fragment_regis" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.project160420055.view.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
 </navigation>

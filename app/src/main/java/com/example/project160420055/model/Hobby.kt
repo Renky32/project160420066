@@ -3,6 +3,7 @@ package com.example.project160420055.model
 import com.google.gson.annotations.SerializedName
 
 data class Hobby(
+    val id : Int,
     @SerializedName("username")
     val username: String,
     @SerializedName("judul")

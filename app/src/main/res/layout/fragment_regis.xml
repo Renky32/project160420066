@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="147dp"
             android:layout_marginTop="508dp"
-            android:text="Button"
+            android:text="Registrasi"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 

@@ -17,7 +17,8 @@ class RegisViewModel(application: Application): AndroidViewModel(application) {
     val TAG = "volleyTag"
     private var queue: RequestQueue? = null
 
-    fun regis(username: String, password: String) {
+    fun regis(username: String, password: String,
+              email : String, Firstname : String, MiddleName : String, LastName : String) {
         queue = Volley.newRequestQueue( getApplication()  )
         val url = "https://my-json-server.typicode.com/Renky32/hobiUbaya/" +
                 "users?username=$username&password=$password"

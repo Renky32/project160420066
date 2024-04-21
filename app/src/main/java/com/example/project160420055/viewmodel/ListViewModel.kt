@@ -26,14 +26,12 @@ class ListViewModel(application: Application): AndroidViewModel(application) {
         val stringRequest=StringRequest(
             Request.Method.GET, url,
             {
-
                 val sType = object : TypeToken<List<Hobby>>() { }.type
                 val result = Gson().fromJson<List<Hobby>>(it, sType)
                 newsLD.value = result as ArrayList<Hobby>?
                 loadingLD.value = false
 
                 Log.d("showvoley", result.toString())
-
             },
             {
                 Log.d("showvoley", it.toString())
