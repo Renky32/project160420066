@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.android.volley.Request
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
@@ -55,6 +56,10 @@ class LoginFragment : Fragment() {
                 }
             })
         }
+        binding.btnRegistrasi.setOnClickListener({
+            val action = LoginFragmentDirections.actionRegistFragment()
+            Navigation.findNavController(it).navigate(action)
+        })
     }
 }
 

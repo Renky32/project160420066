@@ -16,6 +16,9 @@
                 android:name="id"
                 app:argType="integer" />
         </action>
+        <action
+            android:id="@+id/actionRegistFragment"
+            app:destination="@id/regisFragment" />
 
     </fragment>
     <fragment
@@ -23,4 +26,9 @@
         android:name="com.example.project160420055.view.HobbyNewsFragment"
         android:label="fragment_hobby_news"
         tools:layout="@layout/fragment_hobby_news" />
+    <fragment
+        android:id="@+id/regisFragment"
+        android:name="com.example.project160420055.view.RegisFragment"
+        android:label="fragment_regis"
+        tools:layout="@layout/fragment_regis" />
 </navigation>
