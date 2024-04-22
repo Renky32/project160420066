@@ -33,6 +33,9 @@
                 android:name="id"
                 app:argType="integer" />
         </action>
+        <action
+            android:id="@+id/action_hobbyNewsFragment_to_profilFragment"
+            app:destination="@id/profilFragment" />
     </fragment>
     <fragment
         android:id="@+id/regisFragment"
@@ -44,4 +47,9 @@
         android:name="com.example.project160420055.view.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.example.project160420055.view.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
 </navigation>
