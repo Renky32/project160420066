@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.project160420055.R
 import com.example.project160420055.databinding.FragmentHobbyNewsBinding
@@ -43,6 +44,10 @@ class HobbyNewsFragment : Fragment() {
             binding.progressLoad.visibility = View.VISIBLE
             hobModel.refresh()
             binding.refreshLayout.isRefreshing = false
+        }
+        binding.btnProfil.setOnClickListener{
+            val action = HobbyNewsFragmentDirections.actionProfilFragment()
+            Navigation.findNavController(it).navigate(action)
         }
     }
     fun observeViewModel(){

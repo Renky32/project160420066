@@ -34,6 +34,7 @@ class HobbyNewsAdapter(val hobbyList : ArrayList<Hobby>):
             val action = HobbyNewsFragmentDirections.actionDetailFragment(hobbyList[position].id)
             Navigation.findNavController(it).navigate(action)
         }
+
     }
     fun updateNewsList(HobbyList: ArrayList<Hobby>){
         hobbyList.clear()

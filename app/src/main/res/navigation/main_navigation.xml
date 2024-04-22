@@ -34,7 +34,7 @@
                 app:argType="integer" />
         </action>
         <action
-            android:id="@+id/action_hobbyNewsFragment_to_profilFragment"
+            android:id="@+id/actionProfilFragment"
             app:destination="@id/profilFragment" />
     </fragment>
     <fragment
