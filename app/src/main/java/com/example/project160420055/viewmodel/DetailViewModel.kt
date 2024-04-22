@@ -17,7 +17,7 @@ class DetailViewModel(application: Application): AndroidViewModel(application)  
     private var queue: RequestQueue? = null
     val detailLD = MutableLiveData<Hobby>()
 
-    fun refresh(id: Int) {
+    fun fetch(id: Int) {
         queue = Volley.newRequestQueue(getApplication())
         val url = "https://my-json-server.typicode.com/Renky32/hobiUbaya/hobby?id=$id"
         val stringRequest = StringRequest(

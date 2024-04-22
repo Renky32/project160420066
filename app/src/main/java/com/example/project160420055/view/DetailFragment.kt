@@ -16,7 +16,6 @@ import com.squareup.picasso.Picasso
 class DetailFragment : Fragment() {
     private lateinit var viewmodel: DetailViewModel
     private lateinit var binding: FragmentDetailBinding
-    val listDetail = ArrayList<Hobby>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,8 +27,11 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val detailId = arguments?.getInt("id")?:0
+        viewmodel = ViewModelProvider(this).get(DetailViewModel::class.java)
+        viewmodel.fetch(detailId)
 
-       // val detailId = arguments?.getInt("id")?:0
+
         viewmodel.detailLD.observe(viewLifecycleOwner, Observer {
             binding.txtJudul.setText(it.judul)
             binding.txtIsi.setText(it.detail)
