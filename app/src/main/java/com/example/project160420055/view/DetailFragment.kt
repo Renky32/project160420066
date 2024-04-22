@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.project160420055.R
 import com.example.project160420055.databinding.FragmentDetailBinding
 import com.example.project160420055.model.Hobby
 import com.example.project160420055.viewmodel.DetailViewModel
+import com.squareup.picasso.Picasso
 
 class DetailFragment : Fragment() {
     private lateinit var viewmodel: DetailViewModel
@@ -27,7 +29,13 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val detailId = arguments?.getInt("id")?:0
+       // val detailId = arguments?.getInt("id")?:0
+        viewmodel.detailLD.observe(viewLifecycleOwner, Observer {
+            binding.txtJudul.setText(it.judul)
+            binding.txtIsi.setText(it.detail)
+            binding.txtUser.setText(it.username)
+            Picasso.get().load(it.urlGambar).into(binding.imgUser)
+        })
 
     }
 }
